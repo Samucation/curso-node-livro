@@ -87,6 +87,10 @@ class PessoaDois {
     saudacao() {
         return "Olá meu jovem!";
     }
+
+    static saudacaoEstatica() {
+        return "Olá eu jovem, eu sou uma saudação estatica!";
+    }
 }
 
 function funcaoQueChamaObjQuatro() {
@@ -95,6 +99,7 @@ function funcaoQueChamaObjQuatro() {
     console.log(pessoa.nome);
     console.log(pessoa.sobrenome);
     console.log(pessoa.saudacao());
+    console.log(PessoaDois.saudacaoEstatica());
 }
 funcaoQueChamaObjQuatro();
 
