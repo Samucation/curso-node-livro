@@ -1,6 +1,12 @@
 
 
 /** Entendendo a programação funcional em JS ECMA Node */
+
+//Esta função recebe outra função como parametro, todos os métodos a seguir, invocam este método.
+function executarChamadaDeFuncao(funcaoGenerica, primeiroValor, segundoValor) {
+    return funcaoGenerica(primeiroValor, segundoValor) + " - valor estatico da funçãor raiz";
+}
+
 console.log("\n\n------------------------------------------( 1 )-------------------------------------------------\n");
 
 function nomeMaisSobrenome(nome, sobrenome) {
@@ -9,11 +15,6 @@ function nomeMaisSobrenome(nome, sobrenome) {
 
 function idadeMaisPeso(idade, peso) {
     return "\n\nIdade:" + idade + " anos\nPeso:" + peso + "Kg\n";
-}
-
-//Esta função recebe outra função como parametro
-function executarChamadaDeFuncao(funcaoGenerica, primeiroValor, segundoValor) {
-    return funcaoGenerica(primeiroValor, segundoValor);
 }
 
 //Função nomeMaisSobrenome será executada por outra função.
