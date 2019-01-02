@@ -50,3 +50,15 @@ var possiveisProgramadoresArquitetos = todosCargosProgramador.filter(cargoAutori
 console.log("\nArray de todosCargosProgramador antes de ser filtrado pelo filter:\n todosCargosProgramador:\n", todosCargosProgramador);
 console.log("\nArray de cargos que não tem permissão para serem arquitetos de software:\n", cargosSemPermissaoParaArquiteto);
 console.log("\nResultado do filter, o retorno deve ser uma lista com os programadores candidatos a promoção ao cargo de arquiteto:\nPossiveisArquitetos:\n", possiveisProgramadoresArquitetos);
+
+console.log("----------------------(Aprendendo sobre reduce *Acumulador de valores do array)------------------------");
+
+var numerosAteDez = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+//numerosAteDez.reduce recebe apenas dois primeiros parametros, ignorando a posição de inicio, nesse caso o primeiro item do array será ignorado e passado como o valor inicial.
+var totalSomaNumerosAteDezComecandoPeloSegundo = numerosAteDez.reduce((valorAcumulado, n) => (valorAcumulado + n * 2)); //Na posição 2
+console.log("A soma dos numerosAteDez é:", totalSomaNumerosAteDezComecandoPeloSegundo);
+
+//Aqui informamos o valor inicial como 0. Neste caso, todos os items serão processados.
+var totalSomaNumerosAteDezComecandoPeloPrimeiro = numerosAteDez.reduce((valorAcumulado, n) => (valorAcumulado + n * 2), 0); //Na posição 0
+console.log("A soma dos numerosAteDez é:", totalSomaNumerosAteDezComecandoPeloPrimeiro);
